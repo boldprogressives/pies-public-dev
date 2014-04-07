@@ -1,0 +1,11 @@
+<div class="col-md-3">
+<div class="sidenav">
+  <h1><a href="/updates">Updates and Release Notes</a></h1>
+  <ul class="faqnav">
+  {% for post in site.posts %}
+    <li>
+      <a {% if post.id == page.id %}class="active" {% endif %}href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+  </ul>
+</div></div>

@@ -1,0 +1,39 @@
+---
+layout: base
+title: PIES | Updates and Release Notes
+---
+
+<div class="container">
+	<div class="row">
+
+    <div class="col-md-3">
+     	<ul class="faqnav">
+    	{% for post in site.posts %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+      </ul>
+    </div>
+      
+    <div class="col-md-9 pies-content">
+      
+      <h1>PIES Updates and Release Notes</h1>
+      
+      {% for post in site.posts %}
+      
+      <aside><em>{{ post.datestring }}</em></aside>
+      
+      <h3 class="title">
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </h3>
+
+      {{ post.excerpt }}
+      
+      <p><a href="{{ post.url }}">[read on]</a></p>
+      <hr />
+      {% endfor %}
+      			
+    </div>
+	</div><!-- /row -->
+</div> <!-- /container -->

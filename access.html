@@ -1,0 +1,108 @@
+---
+layout: base
+title: PIES | Request Account
+forms: on
+---
+
+    <div class="container">
+
+	<div class="row">
+      <div class="col-md-6 col-md-offset-3 pies-content">
+	      <h2 class="no-top">Request Account</h2>
+      	<p class="top-pad">The PCCC is now taking reservations for PIES beta accounts. If you are a candidate looking to run for office in 2014, or an organizer interested in kicking the tires, sign up for your beta account.</p>
+      	<form class="ak-form" name="act" role="form-horizontal" action="//act.boldprogressives.org/act/" accept-charset="utf-8">
+          <input type="hidden" name="page" value="pies_beta_access_request">
+          <input type="hidden" name="redirect" value="//docs.pies.pccc.co/">
+          <input type="hidden" name="required" value="country"> 
+          <input type="hidden" name="country" value="United States">
+
+          
+          
+      		<div class="form-group">
+	      		<label for="pies-first" class="control-label col-sm-4" >First name</label>
+	      		<div class="col-sm-8">
+	      			<input type="text" name="first_name" class="form-control" id="pies-first" placeholder="first name">
+	      		</div>
+      		</div>
+      		
+      		<div class="form-group">
+	      		<label for="pies-last" class="control-label col-sm-4">Last name</label>
+	      		<div class="col-sm-8">
+	      			<input type="text" name="last_name" class="form-control" id="pies-last" placeholder="last name">
+	      		</div>
+      		</div>
+      		
+      		<div class="form-group">
+	      		<label for="pies-email" class="control-label col-sm-4">Email address</label>
+	      		<div class="col-sm-8">
+	      			<input type="email" name="email" class="form-control" id="pies-email" placeholder="email">
+	      		</div>
+      		</div>
+      		
+      		<div class="form-group">
+	      		<label for="pies-zip" class="control-label col-sm-4">ZIP code</label>
+	      		<div class="col-sm-8">
+	      			<input type="text" name="zip" class="form-control" id="pies-zip" placeholder="zip code">
+	      		</div>
+      		</div>
+      		
+      		<div class="form-group">
+	      		<label for="pies-phone" class="control-label col-sm-4">Phone number</label>
+	      		<div class="col-sm-8">
+	      			<input type="tel" name="phone" class="form-control" id="pies-phone" placeholder="phone number">
+	      		</div>
+      		</div>
+      		
+      		<br>
+      		<hr>
+      		
+      		<div class="form-group">
+	      		<label for="pies-first" class="control-label col-sm-4">Candidate's name</label>
+	      		<div class="col-sm-8">
+	      			<input type="text" name="action_candidate_name" class="form-control" id="pies-first" placeholder="candidate name">
+	      		</div>
+      		</div>
+      		
+      		 <div class="form-group">
+	      		<label for="pies-last" class="control-label col-sm-4">Office</label>
+	      		<div class="col-sm-8">
+	      			<input type="text" name="action_which_office" class="form-control" id="pies-last" placeholder="ex. Nevada State Senate - 23rd district">
+	      		</div>
+      		</div>
+      		
+      		<div class="form-group">
+			  		<label for="me-contact" class="control-label col-sm-4">Contact</label>
+			  		<div class="col-sm-8">
+				  		<label class="p">
+				  		  <input type="checkbox" name="action_contact_is_me" value="true" 
+				  		    onclick="if ($(this).prop('checked')==false) $('.othercontact').show(400); else $('.othercontact').hide(400);" id="me-contact" checked>
+				  		  I will be the PIES contact for this campaign.
+				  		</label>
+			  		</div>
+      		</div>
+      	  			  		  
+          <div class="form-group othercontact" style="display:none;">
+            <label for="pies-first" class="control-label col-sm-4">Contact name</label>
+            <div class="col-sm-8">
+            	<input type="text" name="action_pies_contact_name" class="form-control" id="pies-first" placeholder="contact name">
+            </div>
+          </div>
+          
+          <div class="form-group othercontact" style="display:none;">
+            <label for="pies-last" class="control-label col-sm-4">Contact email</label>
+            <div class="col-sm-8">
+            	<input type="text" name="action_pies_contact_email" class="form-control" id="pies-last" placeholder="contact email">
+            </div>
+          </div>
+      	
+			
+			<div class="form-group">
+				<div class="col-sm-offset-3 col-sm-6">
+					<button type="submit" class="btn pies-btn">Submit</button>
+				</div>
+			</div>
+	
+      		
+      </div>
+	</div><!-- /row -->
+    </div> <!-- /container -->

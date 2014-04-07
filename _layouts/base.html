@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{{ page.description }}" />
+    <meta name="author" content="PIES by BoldProgressives.org" />
+    <link rel="shortcut icon" href="/assets/ico/favicon.png" />
+    
+
+    <title>{{ page.title }}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/dist/css/bootstrap.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="/public.css" rel="stylesheet" />
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+    <script>startTime=new Date()</script>
+
+  </head>
+
+  <body>
+
+	<div id="top-border"></div>
+    <!-- Fixed navbar -->
+    <div class="navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./">
+            <img src="/assets/img/pies-logo-lg.png" />
+          </a>
+        </div><!-- .navbar-header -->
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+          	<li><a href="/">Welcome</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <!--li><a href="guide">User Guide</a></li-->
+            <!--li><a href="updates">Updates</a></li-->
+            <li class="signup"><a href="/access">Request Account</a></li>
+          </ul>
+        </div><!-- .nav-collapse -->
+      </div><!-- .container -->
+    </div><!-- .navbar -->
+
+{{ content }}
+
+	<footer class="container">
+
+		<div class="row">
+  		<p class="footer-links"><a href="/agreement">User Agreement</a> | <a href="/privacy">Privacy Policy</a></p>
+		</div>
+
+		<div class="row">
+  		<div class="col-md-3">
+  			<a class="footer-logo" href="./">
+  			  <img src="/assets/img/pies-logo-lg.png" />
+        </a>
+  		</div>
+  		<div class="col-md-9">
+  			<p class="disclaimer">
+  			  Paid for by the Progressive Change Campaign Committee PAC (BoldProgressives.org) 
+  			  and not authorized by any candidate or candidate's committee. Contributions to the 
+  			  PCCC are not deductible as charitable contributions for federal income tax purposes.
+        </p>
+  		</div>
+		</div>
+
+	</footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/dist/js/bootstrap.min.js"></script>
+    {% if page.forms == 'on' %}
+    <script src="//act.boldprogressives.org/resources/actionkit.js"></script>
+    {% endif %}
+    
+    <script>
+$(document).ready(function(){
+  $('.sidenav').affix({
+    offset: {
+      top: 160,
+      bottom: function () {
+        return (this.bottom = $('footer').outerHeight(true))
+      }
+      }
+  });
+  
+     console.log($('footer').outerHeight(true));
+  {% if page.forms == 'on' %}  
+  if (window.actionkit) {
+    actionkit.forms.contextRoot = '//act.boldprogressives.org/context/';
+    actionkit.forms.initForm('act');
+    actionkit.utils.appendHiddenInput('action_referrer', document.referrer);
+  }
+  {% endif %}
+
+  {% if page.title == 'PIES | Welcome' %}
+  $('a[href="#field"]').click(function(e) {
+  		e.preventDefault();
+    	$('html,body').animate({
+        scrollTop: $("#field").offset().top},
+        'slow');
+  	});
+  
+  	$('a[href="#finance"]').click(function(e) {
+  		e.preventDefault();
+    	$('html,body').animate({
+        scrollTop: $("#finance").offset().top},
+        'slow');
+  	});
+  
+  	$('a[href="#digital"]').click(function(e) {
+  		e.preventDefault();
+    	$('html,body').animate({
+        scrollTop: $("#digital").offset().top},
+        'slow');
+  	});
+  
+  	$('a[href="#resources"]').click(function(e) {
+  		e.preventDefault();
+    	$('html,body').animate({
+        scrollTop: $("#resources").offset().top},
+        'slow');
+  	});
+  
+  	$('a[href="#setup"]').click(function(e) {
+  		e.preventDefault();
+    	$('html,body').animate({
+        scrollTop: $("#setup").offset().top},
+        'slow');
+  	});
+  
+  	$('a[href="#onward"]').click(function(e) {
+  		e.preventDefault();
+    	$('html,body').animate({
+        scrollTop: $("#onward").offset().top},
+        'slow');
+  	});
+  
+  	$('.expand').tooltip();
+  	
+  	{% endif %}
+  
+});
+  </script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-11347857-2', 'campaignpies.com');
+    ga('send', 'pageview');
+  
+  </script> 
+    
+  </body>
+</html>

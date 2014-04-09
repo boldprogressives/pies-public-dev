@@ -179,9 +179,6 @@ form {
 
 .affix-bottom {
 position: absolute;
- width: inherit;
-  position: absolute;
-  top: auto;
 }
 
 .updates{

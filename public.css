@@ -178,7 +178,9 @@ form {
 }
 
 .affix-bottom {
-position: absolute;
+position: absolute; 
+top: auto;
+bottom: 20px; 
 }
 
 .updates{

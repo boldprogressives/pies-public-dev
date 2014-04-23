@@ -1,8 +1,26 @@
 $(document).ready(function(){
 
-var sidenavTop = $('.sidenav').offset().top;
 
-  $(window).scroll(function(){
+var margin = 200;
+var t = $("#top-border").offset().top + $("#top-border").outerHeight() - margin;
+var b = $("footer").outerHeight() + margin;
+var myElement = $('.sidenav');
+
+
+myElement.affix({
+      offset: {
+         top: function () {
+             return t;
+         }
+         , bottom: function () {
+             return (myElement.hasClass("affix-top")) ? 0 : b;
+         }
+     }
+});
+
+//var sidenavTop = $('.sidenav').offset().top;
+//$('.sidenav').affix();
+/*  $(window).scroll(function(){
 
     if($(document).scrollTop() >= sidenavTop){
 
@@ -29,6 +47,6 @@ var sidenavTop = $('.sidenav').offset().top;
       }
       
   });
-
+*/
   
 });
